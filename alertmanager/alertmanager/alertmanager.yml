@@ -1,0 +1,28 @@
+global:
+  resolve_timeout: 5m
+  smtp_smarthost: 'smtp.gmail.com:587'
+  smtp_from: 'flyingiancheng@gmail.com'
+  smtp_auth_username: 'flyingiancheng@gmail.com'
+  smtp_auth_password: 'roptqepiiyuzyvqs'
+  smtp_require_tls: true
+
+route:
+  group_by: ['alertname']
+  group_wait: 0s
+  group_interval: 1s
+  repeat_interval: 30m 
+  receiver: 'email-notifier'
+
+receivers:
+  - name: 'email-notifier'
+    email_configs:
+      - to: 'admwcw@ccu.edu.tw'
+        headers:
+          subject: '[ALERT] {{ .CommonAnnotations.summary }}'
+
+inhibit_rules:
+  - source_match:
+      severity: 'critical'
+    target_match:
+      severity: 'warning'
+    equal: ['alertname', 'dev', 'instance']

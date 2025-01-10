@@ -1,0 +1,5561 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 16,
+  "links": [],
+  "panels": [
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 7,
+        "x": 0,
+        "y": 0
+      },
+      "id": 61,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div class=\"css-1ntvj01\" style=\"display: flex; align-items: center; justify-content: center; height: 100px;\">\r\n    <h3 class=\"css-p584vf\" style=\"text-align: center; font-size: 40px; color:#99d3e8\">${name_of_station:text}</h3>\r\n</div>\r\n\r\n\r\n <!-- background: linear-gradient(120deg, rgb(12, 26, 73), rgb(19, 68, 117)); -->",
+        "mode": "html"
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 5,
+        "x": 7,
+        "y": 0
+      },
+      "id": 58,
+      "options": {
+        "bgColor": "transparent",
+        "clockType": "24 hour",
+        "countdownSettings": {
+          "endCountdownTime": "2024-11-15T19:40:08+08:00",
+          "endText": "00:00:00",
+          "invalidValueText": "invalid value",
+          "noValueText": "no value found",
+          "queryCalculation": "last",
+          "source": "input"
+        },
+        "countupSettings": {
+          "beginCountupTime": "2024-11-15T19:40:08+08:00",
+          "beginText": "00:00:00",
+          "invalidValueText": "invalid value",
+          "noValueText": "no value found",
+          "queryCalculation": "last",
+          "source": "input"
+        },
+        "dateSettings": {
+          "dateFormat": "YYYY-MM-DD",
+          "fontSize": "20px",
+          "fontWeight": "bold",
+          "locale": "",
+          "showDate": true
+        },
+        "descriptionSettings": {
+          "descriptionText": "",
+          "fontSize": "30px",
+          "fontWeight": "normal",
+          "noValueText": "no description found",
+          "source": "none"
+        },
+        "fontMono": true,
+        "mode": "time",
+        "refresh": "sec",
+        "timeSettings": {
+          "fontSize": "50px",
+          "fontWeight": "normal"
+        },
+        "timezone": "Asia/Taipei",
+        "timezoneSettings": {
+          "fontSize": "12px",
+          "fontWeight": "normal",
+          "showTimezone": false,
+          "zoneFormat": "offsetAbbv"
+        }
+      },
+      "pluginVersion": "2.1.8",
+      "targets": [
+        {
+          "refId": "A"
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "grafana-clock-panel"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 5,
+        "x": 12,
+        "y": 0
+      },
+      "id": 91,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div class=\"css-1ntvj01\" style=\"display: flex; align-items: center; justify-content: center; height: 100px;\">\r\n    <h3 class=\"css-p584vf\" style=\"text-align: center; font-size: 40px;\">${name_of_metrics:text}</h3>\r\n</div>\r\n",
+        "mode": "html"
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 7,
+        "x": 17,
+        "y": 0
+      },
+      "id": 85,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div class=\"css-1ntvj01\" style=\"display: flex; align-items: center; justify-content: center; height: 100px;\">\r\n    <h3 class=\"css-p584vf\" style=\"text-align: center; font-size: 40px; color:rgb(227, 145, 199)\">${name_of_station_2:text}</h3>\r\n</div>\r\n",
+        "mode": "html"
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#66bcda",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "Temperature",
+          "mappings": [],
+          "noValue": "No Temperature data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80.0002
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 0,
+        "y": 3
+      },
+      "id": 29,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-74&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_temperature_celsius{station_id=\"$name_of_station\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#113ea7",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "AQI",
+          "mappings": [],
+          "max": 100,
+          "noValue": "No AQI data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#28bf55",
+                "value": null
+              },
+              {
+                "color": "#fefb5b",
+                "value": 51
+              },
+              {
+                "color": "#f19d4c",
+                "value": 101
+              },
+              {
+                "color": "#b92639",
+                "value": 151
+              },
+              {
+                "color": "#5e0e93",
+                "value": 201
+              },
+              {
+                "color": "#731425",
+                "value": 301
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byValue",
+              "options": {
+                "op": "gte",
+                "reducer": "lastNotNull",
+                "value": 0
+              }
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "AQI 🟢"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 2,
+        "x": 5,
+        "y": 3
+      },
+      "id": 109,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-74&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "vertical",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_aqi{station_id=\"$name_of_station\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "description": "chose \"name_of_station\" and \"name_of_metrics\" above",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic-by-name"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "${name_of_metrics:text}",
+            "axisPlacement": "left",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 5,
+            "pointSize": 4,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "noValue": "No such data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.PM2\\.5./"
+            },
+            "properties": [
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "#fefb5b",
+                      "value": 15.5
+                    },
+                    {
+                      "color": "#f19d4c",
+                      "value": 35.5
+                    },
+                    {
+                      "color": "#b92639",
+                      "value": 54.5
+                    },
+                    {
+                      "color": "#5e0e93",
+                      "value": 150.5
+                    },
+                    {
+                      "color": "#731425",
+                      "value": 250.4
+                    },
+                    {
+                      "color": "#731425",
+                      "value": 350.5
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "custom.thresholdsStyle",
+                "value": {
+                  "mode": "line+area"
+                }
+              },
+              {
+                "id": "custom.axisSoftMax",
+                "value": 18.6
+              },
+              {
+                "id": "custom.axisSoftMin",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.PM10./"
+            },
+            "properties": [
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "#fefb5b",
+                      "value": 51
+                    },
+                    {
+                      "color": "#f19d4c",
+                      "value": 101
+                    },
+                    {
+                      "color": "#b92639",
+                      "value": 255
+                    },
+                    {
+                      "color": "#5e0e93",
+                      "value": 355
+                    },
+                    {
+                      "color": "#731425",
+                      "value": 425
+                    },
+                    {
+                      "color": "#731425",
+                      "value": 505
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "custom.thresholdsStyle",
+                "value": {
+                  "mode": "line+area"
+                }
+              },
+              {
+                "id": "custom.axisSoftMax",
+                "value": 60
+              },
+              {
+                "id": "custom.axisSoftMin",
+                "value": -2
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.O3./"
+            },
+            "properties": [
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "#73BF69",
+                      "value": null
+                    },
+                    {
+                      "color": "#f19d4c",
+                      "value": 125
+                    },
+                    {
+                      "color": "#b92639",
+                      "value": 165
+                    },
+                    {
+                      "color": "#5e0e93",
+                      "value": 205
+                    },
+                    {
+                      "color": "#731425",
+                      "value": 405
+                    },
+                    {
+                      "color": "#731425",
+                      "value": 505
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "custom.thresholdsStyle",
+                "value": {
+                  "mode": "line+area"
+                }
+              },
+              {
+                "id": "custom.axisSoftMax",
+                "value": 150
+              },
+              {
+                "id": "custom.axisSoftMin",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.CO(?!2)./"
+            },
+            "properties": [
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "#fefb5b",
+                      "value": 4.5
+                    },
+                    {
+                      "color": "#f19d4c",
+                      "value": 9.5
+                    },
+                    {
+                      "color": "#b92639",
+                      "value": 12.5
+                    },
+                    {
+                      "color": "#5e0e93",
+                      "value": 15.5
+                    },
+                    {
+                      "color": "#731425",
+                      "value": 30.5
+                    },
+                    {
+                      "color": "#731425",
+                      "value": 40.5
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "custom.thresholdsStyle",
+                "value": {
+                  "mode": "dashed+area"
+                }
+              },
+              {
+                "id": "custom.axisSoftMax",
+                "value": 5.4
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.*106_1./"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "共同教育大樓106教室"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.*A1F_1./"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.*ARF_1./"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "地質環境館屋頂"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.*B1F_1./"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "活動中心B1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.*M_1./"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.*PL_1./"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室左側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.*PR_1./"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室右側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.*106_2./"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "共同教育大樓106教室"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.*A1F_2./"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.*ARF_2./"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "地質環境館屋頂"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.*B1F_2./"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "活動中心B1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.*M_2./"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.*PL_2./"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "displayName",
+                "value": "化工實驗室左側"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/.*PR_2./"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室右側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 10,
+        "x": 7,
+        "y": 3
+      },
+      "id": 115,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "$name_of_metrics{station_id=\"$name_of_station\"}",
+          "format": "time_series",
+          "fullMetaSearch": false,
+          "hide": false,
+          "includeNullMetadata": true,
+          "interval": "",
+          "legendFormat": "{{station_id}}_1_${name_of_metrics:text}",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "$name_of_metrics{station_id=\"$name_of_station_2\"}",
+          "fullMetaSearch": false,
+          "hide": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "{{station_id}}_2_${name_of_metrics:text}",
+          "range": true,
+          "refId": "B",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#7a215a",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "AQI",
+          "mappings": [],
+          "max": 100,
+          "noValue": "No AQI data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#28bf55",
+                "value": null
+              },
+              {
+                "color": "#fefb5b",
+                "value": 51
+              },
+              {
+                "color": "#f19d4c",
+                "value": 101
+              },
+              {
+                "color": "#b92639",
+                "value": 151
+              },
+              {
+                "color": "#5e0e93",
+                "value": 201
+              },
+              {
+                "color": "#731425",
+                "value": 301
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byValue",
+              "options": {
+                "op": "gte",
+                "reducer": "lastNotNull",
+                "value": 0
+              }
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "AQI 🟢"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 2,
+        "x": 17,
+        "y": 3
+      },
+      "id": 114,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-74&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_aqi{station_id=\"$name_of_station_2\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#cc3596",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "Temperature",
+          "mappings": [],
+          "noValue": "No Temperature data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80.0002
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 19,
+        "y": 3
+      },
+      "id": 84,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-74&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_temperature_celsius{station_id=\"$name_of_station_2\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#6691d9",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "Humidity",
+          "mappings": [],
+          "noValue": "No Humidity data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80.0003
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 0,
+        "y": 8
+      },
+      "id": 40,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-98&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_humidity_percentage{station_id=\"$name_of_station\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#e391c7",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "Humidity",
+          "mappings": [],
+          "noValue": "No Humidity data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80.0003
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 5,
+        "x": 19,
+        "y": 8
+      },
+      "id": 88,
+      "links": [
+        {
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-98&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_humidity_percentage{station_id=\"$name_of_station_2\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#66bcda",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "PM2.5",
+          "mappings": [],
+          "noValue": "No PM2.5 data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80.0002
+              }
+            ]
+          },
+          "unit": "conμgm3"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 0,
+        "y": 13
+      },
+      "id": 39,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-99&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_pm25_microgram_cubic_meter{station_id=\"$name_of_station\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#cc3596",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "PM2.5",
+          "mappings": [],
+          "noValue": "No PM2.5 data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80.0002
+              }
+            ]
+          },
+          "unit": "conμgm3"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 13
+      },
+      "id": 89,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-99&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_pm25_microgram_cubic_meter{station_id=\"$name_of_station_2\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#6691d9",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "PM10",
+          "mappings": [],
+          "noValue": "No PM10 data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80.0002
+              }
+            ]
+          },
+          "unit": "conμgm3"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 0,
+        "y": 17
+      },
+      "id": 37,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-100&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_pm10_microgram_cubic_meter{station_id=\"$name_of_station\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#e391c7",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "PM10",
+          "mappings": [],
+          "noValue": "No PM10 data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80.0002
+              }
+            ]
+          },
+          "unit": "conμgm3"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 17
+      },
+      "id": 86,
+      "links": [
+        {
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-100&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_pm10_microgram_cubic_meter{station_id=\"$name_of_station_2\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "description": "grouped by 站點. alert condition is shown in label.",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 22,
+        "w": 10,
+        "x": 7,
+        "y": 19
+      },
+      "id": 59,
+      "options": {
+        "alertInstanceLabelFilter": "{站點=~\"活動中心B1|地質環境館屋頂|化生實驗室右側|化生實驗室左側|共同教育大樓106教室|Unknown1|Unknown2\"}",
+        "alertName": "",
+        "dashboardAlerts": false,
+        "folder": "",
+        "groupBy": [
+          "站點"
+        ],
+        "groupMode": "custom",
+        "maxItems": 20,
+        "sortOrder": 4,
+        "stateFilter": {
+          "error": true,
+          "firing": true,
+          "noData": true,
+          "normal": true,
+          "pending": true
+        },
+        "viewMode": "list"
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "title": "Alert",
+      "type": "alertlist"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#66bcda",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "CO2",
+          "mappings": [],
+          "noValue": "No CO2 data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "ppm"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 0,
+        "y": 21
+      },
+      "id": 38,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-101&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_co2_ppm{station_id=\"$name_of_station\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#cc3596",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "CO2",
+          "mappings": [],
+          "noValue": "No CO2 data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "ppm"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 21
+      },
+      "id": 87,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-101&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_co2_ppm{station_id=\"$name_of_station_2\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#6691d9",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "CO",
+          "mappings": [],
+          "noValue": "No CO data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80.0002
+              }
+            ]
+          },
+          "unit": "ppm"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 0,
+        "y": 25
+      },
+      "id": 92,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-102&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_co_ppm{station_id=\"$name_of_station\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#e391c7",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "CO",
+          "mappings": [],
+          "noValue": "No CO data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80.0002
+              }
+            ]
+          },
+          "unit": "ppm"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 25
+      },
+      "id": 93,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-102&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_co_ppm{station_id=\"$name_of_station_2\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#66bcda",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "HC",
+          "mappings": [],
+          "noValue": "No HC data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80.0002
+              }
+            ]
+          },
+          "unit": "conppb"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 0,
+        "y": 29
+      },
+      "id": 36,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-103&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_hc_ppb{station_id=\"$name_of_station\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#cc3596",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "HC",
+          "mappings": [],
+          "noValue": "No HC data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80.0002
+              }
+            ]
+          },
+          "unit": "conppb"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 29
+      },
+      "id": 90,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-103&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_hc_ppb{station_id=\"$name_of_station_2\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#6691d9",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "O3",
+          "mappings": [],
+          "noValue": "No O3 data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80.0002
+              }
+            ]
+          },
+          "unit": "ppm"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 0,
+        "y": 33
+      },
+      "id": 94,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-104&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_o3_ppb{station_id=\"$name_of_station\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#e391c7",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "O3",
+          "mappings": [],
+          "noValue": "No O3 data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80.0002
+              }
+            ]
+          },
+          "unit": "ppm"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 33
+      },
+      "id": 95,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-104&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_o3_ppb{station_id=\"$name_of_station_2\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#66bcda",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "VOC",
+          "mappings": [],
+          "noValue": "No VOC data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80.0002
+              }
+            ]
+          },
+          "unit": "ppm"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 0,
+        "y": 37
+      },
+      "id": 96,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-105&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_voc_ppb{station_id=\"$name_of_station\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#cc3596",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "VOC",
+          "mappings": [],
+          "noValue": "No VOC data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80.0002
+              }
+            ]
+          },
+          "unit": "ppm"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": ""
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 37
+      },
+      "id": 97,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "",
+          "url": "http://${url}/d/ce3enb7e9nsaoe/air-quality-monitor-layout-test?viewPanel=panel-105&${compare_metrics:queryparam}"
+        }
+      ],
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe4fmbh4ry03kd"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_voc_ppb{station_id=\"$name_of_station_2\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 41
+      },
+      "id": 106,
+      "panels": [],
+      "title": "嘉義市空品監測站",
+      "type": "row"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 10,
+        "x": 0,
+        "y": 42
+      },
+      "id": 60,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<img src=\"http://140.123.101.199:33625/get_image\" />",
+        "mode": "html"
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "title": "環境部嘉義測站影像",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#f59c3d",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "Predict PM2.5",
+          "mappings": [],
+          "noValue": "No PM2.5 data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "conμgm3"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 10,
+        "y": 42
+      },
+      "id": 107,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_prediction_pm25_microgram_cubic_meter",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "orange",
+            "mode": "shades"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "μg/m³",
+            "axisPlacement": "right",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 6,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "displayName": "嘉義市",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "conμgm3"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 8,
+        "x": 16,
+        "y": 42
+      },
+      "id": 108,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_prediction_pm25_microgram_cubic_meter",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#e97e0c",
+            "mode": "shades"
+          },
+          "decimals": 1,
+          "displayName": "Predict PM2.5",
+          "mappings": [],
+          "noValue": "No PM2.5 data in this station",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "conμgm3"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 10,
+        "y": 49
+      },
+      "id": 111,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_prediction_pm25_microgram_cubic_meter",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 56
+      },
+      "id": 76,
+      "panels": [],
+      "title": "Temperature",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "˚C",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 5,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/B1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "活動中心B1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#51c5d5",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/106/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "共同教育大樓106教室"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#3fb2e8",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/ARF/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "地質環境館屋頂"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#739beb",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PL/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室左側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#af79cf",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PR/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室右側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#d35497",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/A1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#fd5b75",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/M/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ff7a49",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 57
+      },
+      "id": 74,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_temperature_celsius{station_id=~\"$compare_metrics\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Temperature",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 66
+      },
+      "id": 78,
+      "panels": [],
+      "title": "Humidity",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "%",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 5,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/B1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "活動中心B1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#51c5d5",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/106/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "共同教育大樓106教室"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#3fb2e8",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/ARF/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "地質環境館屋頂"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#739beb",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PL/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室左側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#af79cf",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PR/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室右側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#d35497",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/A1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#fd5b75",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/M/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ff7a49",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 67
+      },
+      "id": 98,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_humidity_percentage{station_id=~\"$compare_metrics\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Humidity",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 76
+      },
+      "id": 83,
+      "panels": [],
+      "title": "PM2.5",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "µg/m³",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 5,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/B1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "活動中心B1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#51c5d5",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/106/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "共同教育大樓106教室"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#3fb2e8",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/ARF/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "地質環境館屋頂"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#739beb",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PL/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室左側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#af79cf",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PR/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室右側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#d35497",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/A1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#fd5b75",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/M/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ff7a49",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 77
+      },
+      "id": 99,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_pm25_microgram_cubic_meter{station_id=~\"$compare_metrics\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "PM2.5",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 86
+      },
+      "id": 79,
+      "panels": [],
+      "title": "PM10",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "µg/m³",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 5,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/B1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "活動中心B1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#51c5d5",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/106/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "共同教育大樓106教室"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#3fb2e8",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/ARF/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "地質環境館屋頂"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#739beb",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PL/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室左側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#af79cf",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PR/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室右側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#d35497",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/A1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#fd5b75",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/M/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ff7a49",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 87
+      },
+      "id": 100,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_pm10_microgram_cubic_meter{station_id=~\"$compare_metrics\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "PM10",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 96
+      },
+      "id": 15,
+      "panels": [],
+      "title": "CO2",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "ppm",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 5,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/B1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "活動中心B1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#51c5d5",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/106/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "共同教育大樓106教室"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#3fb2e8",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/ARF/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "地質環境館屋頂"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#739beb",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PL/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室左側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#af79cf",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PR/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室右側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#d35497",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/A1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#fd5b75",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/M/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ff7a49",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 97
+      },
+      "id": 101,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_co2_ppm{station_id=~\"$compare_metrics\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "CO2",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 106
+      },
+      "id": 77,
+      "panels": [],
+      "title": "CO",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "ppm",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 5,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/B1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "活動中心B1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#51c5d5",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/106/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "共同教育大樓106教室"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#3fb2e8",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/ARF/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "地質環境館屋頂"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#739beb",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PL/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室左側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#af79cf",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PR/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室右側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#d35497",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/A1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#fd5b75",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/M/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ff7a49",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 107
+      },
+      "id": 102,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_co_ppm{station_id=~\"$compare_metrics\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "CO",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 116
+      },
+      "id": 82,
+      "panels": [],
+      "title": "HC",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "ppb",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 5,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/B1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "活動中心B1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#51c5d5",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/106/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "共同教育大樓106教室"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#3fb2e8",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/ARF/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "地質環境館屋頂"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#739beb",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PL/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室左側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#af79cf",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PR/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室右側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#d35497",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/A1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#fd5b75",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/M/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ff7a49",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 117
+      },
+      "id": 103,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_hc_ppb{station_id=~\"$compare_metrics\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "HC",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 126
+      },
+      "id": 81,
+      "panels": [],
+      "title": "O3",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "ppm",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 5,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/B1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "活動中心B1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#51c5d5",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/106/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "共同教育大樓106教室"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#3fb2e8",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/ARF/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "地質環境館屋頂"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#739beb",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PL/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室左側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#af79cf",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PR/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室右側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#d35497",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/A1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#fd5b75",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/M/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ff7a49",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 127
+      },
+      "id": 104,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_o3_ppb{station_id=~\"$compare_metrics\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "O3",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 136
+      },
+      "id": 80,
+      "panels": [],
+      "title": "VOC",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe4fmbh4ry03kd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "ppb",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 5,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/B1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "活動中心B1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#51c5d5",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/106/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "共同教育大樓106教室"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#3fb2e8",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/ARF/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "地質環境館屋頂"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#739beb",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PL/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室左側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#af79cf",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/PR/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "化工實驗室右側"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#d35497",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/A1F/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 1"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#fd5b75",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/M/"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Unknown 2"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ff7a49",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 137
+      },
+      "id": 105,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "air_quality_voc_ppb{station_id=~\"$compare_metrics\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "VOC",
+      "type": "timeseries"
+    }
+  ],
+  "preload": false,
+  "schemaVersion": 40,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "text": "prometheus",
+          "value": "fe4fmbh4ry03kd"
+        },
+        "description": "choose data source of humidity and temperature.",
+        "hide": 2,
+        "name": "data_source",
+        "options": [],
+        "query": "prometheus",
+        "refresh": 1,
+        "regex": "",
+        "type": "datasource"
+      },
+      {
+        "auto": true,
+        "auto_count": 30,
+        "auto_min": "10s",
+        "current": {
+          "text": "1m",
+          "value": "1m"
+        },
+        "description": "I'm just testing. (It doesn't work, still a lot of things to be adjusted) I want go sleep.",
+        "hide": 2,
+        "name": "testing",
+        "options": [
+          {
+            "selected": true,
+            "text": "1m",
+            "value": "1m"
+          },
+          {
+            "selected": false,
+            "text": "10m",
+            "value": "10m"
+          },
+          {
+            "selected": false,
+            "text": "30m",
+            "value": "30m"
+          },
+          {
+            "selected": false,
+            "text": "1h",
+            "value": "1h"
+          },
+          {
+            "selected": false,
+            "text": "6h",
+            "value": "6h"
+          },
+          {
+            "selected": false,
+            "text": "12h",
+            "value": "12h"
+          },
+          {
+            "selected": false,
+            "text": "1d",
+            "value": "1d"
+          },
+          {
+            "selected": false,
+            "text": "7d",
+            "value": "7d"
+          },
+          {
+            "selected": false,
+            "text": "14d",
+            "value": "14d"
+          },
+          {
+            "selected": false,
+            "text": "30d",
+            "value": "30d"
+          }
+        ],
+        "query": "1m,10m,30m,1h,6h,12h,1d,7d,14d,30d",
+        "refresh": 2,
+        "type": "interval"
+      },
+      {
+        "current": {
+          "text": "air_quality_co2_ppm",
+          "value": "air_quality_co2_ppm"
+        },
+        "definition": "metrics(air_quality)",
+        "description": "choose metric in the drop-down list.",
+        "hide": 2,
+        "includeAll": false,
+        "name": "metrics",
+        "options": [],
+        "query": {
+          "qryType": 2,
+          "query": "metrics(air_quality)",
+          "refId": "PrometheusVariableQueryEditor-VariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "type": "query"
+      },
+      {
+        "current": {
+          "text": "A1F",
+          "value": "A1F"
+        },
+        "definition": "label_values($metrics, station_id)",
+        "description": "choose station in the drop-down list.",
+        "hide": 2,
+        "label": "station",
+        "name": "station",
+        "options": [],
+        "query": {
+          "qryType": 5,
+          "query": "label_values($metrics, station_id)",
+          "refId": "PrometheusVariableQueryEditor-VariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "type": "query"
+      },
+      {
+        "current": {
+          "text": "air_quality_pm10_microgram_cubic_meter",
+          "value": "air_quality_pm10_microgram_cubic_meter"
+        },
+        "description": "版面中間折線圖顯示的指標",
+        "label": "圖表",
+        "name": "name_of_metrics",
+        "options": [
+          {
+            "selected": false,
+            "text": "Temperature (˚C)",
+            "value": "air_quality_temperature_celsius"
+          },
+          {
+            "selected": false,
+            "text": "Humidity (%)",
+            "value": "air_quality_humidity_percentage"
+          },
+          {
+            "selected": false,
+            "text": "PM2.5 (µg/m³)",
+            "value": "air_quality_pm25_microgram_cubic_meter"
+          },
+          {
+            "selected": true,
+            "text": "PM10 (µg/m³)",
+            "value": "air_quality_pm10_microgram_cubic_meter"
+          },
+          {
+            "selected": false,
+            "text": "CO2 (ppm)",
+            "value": "air_quality_co2_ppm"
+          },
+          {
+            "selected": false,
+            "text": "CO (ppm)",
+            "value": "air_quality_co_ppm"
+          },
+          {
+            "selected": false,
+            "text": "HC (ppb)",
+            "value": "air_quality_hc_ppb"
+          },
+          {
+            "selected": false,
+            "text": "O3 (ppb)",
+            "value": "air_quality_o3_ppb"
+          },
+          {
+            "selected": false,
+            "text": "VOC (ppb)",
+            "value": "air_quality_voc_ppb"
+          }
+        ],
+        "query": "Temperature (˚C) : air_quality_temperature_celsius,Humidity (%) : air_quality_humidity_percentage,PM2.5 (µg/m³) : air_quality_pm25_microgram_cubic_meter,PM10 (µg/m³) : air_quality_pm10_microgram_cubic_meter,CO2 (ppm) : air_quality_co2_ppm,CO (ppm) : air_quality_co_ppm,HC (ppb) : air_quality_hc_ppb,O3 (ppb) : air_quality_o3_ppb,VOC (ppb) : air_quality_voc_ppb",
+        "type": "custom"
+      },
+      {
+        "current": {
+          "text": "ARF",
+          "value": "ARF"
+        },
+        "description": "左邊顯示的測站",
+        "includeAll": false,
+        "label": "測站 左",
+        "name": "name_of_station",
+        "options": [
+          {
+            "selected": false,
+            "text": "活動中心B1",
+            "value": "B1F"
+          },
+          {
+            "selected": false,
+            "text": "共同教育大樓106教室",
+            "value": "106"
+          },
+          {
+            "selected": true,
+            "text": "地質環境館屋頂",
+            "value": "ARF"
+          },
+          {
+            "selected": false,
+            "text": "化生實驗室左側",
+            "value": "PL"
+          },
+          {
+            "selected": false,
+            "text": "化生實驗室右側",
+            "value": "PR"
+          },
+          {
+            "selected": false,
+            "text": "Unknown 1",
+            "value": "A1F"
+          },
+          {
+            "selected": false,
+            "text": "Unknown 2",
+            "value": "M"
+          }
+        ],
+        "query": "活動中心B1 : B1F,共同教育大樓106教室 : 106,地質環境館屋頂 : ARF,化生實驗室左側 : PL,化生實驗室右側 : PR,Unknown 1 : A1F,Unknown 2 : M",
+        "type": "custom"
+      },
+      {
+        "current": {
+          "text": "B1F",
+          "value": "B1F"
+        },
+        "description": "右邊顯示的測站",
+        "includeAll": false,
+        "label": "測站 右",
+        "name": "name_of_station_2",
+        "options": [
+          {
+            "selected": true,
+            "text": "活動中心B1",
+            "value": "B1F"
+          },
+          {
+            "selected": false,
+            "text": "共同教育大樓106教室",
+            "value": "106"
+          },
+          {
+            "selected": false,
+            "text": "地質環境館屋頂",
+            "value": "ARF"
+          },
+          {
+            "selected": false,
+            "text": "化生實驗室左側",
+            "value": "PL"
+          },
+          {
+            "selected": false,
+            "text": "化生實驗室右側",
+            "value": "PR"
+          },
+          {
+            "selected": false,
+            "text": "Unknown 1",
+            "value": "A1F"
+          },
+          {
+            "selected": false,
+            "text": "Unknown 2",
+            "value": "M"
+          }
+        ],
+        "query": "活動中心B1 : B1F,共同教育大樓106教室 : 106,地質環境館屋頂 : ARF,化生實驗室左側 : PL,化生實驗室右側 : PR,Unknown 1 : A1F,Unknown 2 : M",
+        "type": "custom"
+      },
+      {
+        "allValue": "活動中心B1, 共同教育大樓106教室",
+        "current": {
+          "text": [
+            "ARF",
+            "106",
+            "PL",
+            "PR",
+            "A1F"
+          ],
+          "value": [
+            "ARF",
+            "106",
+            "PL",
+            "PR",
+            "A1F"
+          ]
+        },
+        "description": "下方折線圖要比較的測站（多選）",
+        "includeAll": false,
+        "label": "比較測站",
+        "multi": true,
+        "name": "compare_metrics",
+        "options": [
+          {
+            "selected": false,
+            "text": "活動中心B1",
+            "value": "B1F"
+          },
+          {
+            "selected": true,
+            "text": "共同教育大樓106教室",
+            "value": "106"
+          },
+          {
+            "selected": true,
+            "text": "地質環境館屋頂",
+            "value": "ARF"
+          },
+          {
+            "selected": true,
+            "text": "化生實驗室左側",
+            "value": "PL"
+          },
+          {
+            "selected": true,
+            "text": "化生實驗室右側",
+            "value": "PR"
+          },
+          {
+            "selected": true,
+            "text": "Unknown 1",
+            "value": "A1F"
+          },
+          {
+            "selected": false,
+            "text": "Unknown 2",
+            "value": "M"
+          }
+        ],
+        "query": "活動中心B1 : B1F,共同教育大樓106教室 : 106,地質環境館屋頂 : ARF,化生實驗室左側 : PL,化生實驗室右側 : PR,Unknown 1 : A1F,Unknown 2 : M",
+        "type": "custom"
+      },
+      {
+        "current": {
+          "text": "140.123.101.199:3000",
+          "value": "140.123.101.199:3000"
+        },
+        "description": "Your server url",
+        "hide": 2,
+        "label": "url",
+        "name": "url",
+        "query": "140.123.101.199:3000",
+        "skipUrlSync": true,
+        "type": "constant"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "air_quality_monitor_demo",
+  "uid": "ce3enb7e9nsao2",
+  "version": 9,
+  "weekStart": ""
+}

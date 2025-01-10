@@ -1,0 +1,11 @@
+groups:
+  - name: air_quality_alerts
+    rules:
+      - alert: HighAirQualityIndex
+        expr: air_quality_aqi > 25
+        for: 30m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High Air Quality Index Detected"
+          description: "The AQI at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 150 for over 30 minutes."
