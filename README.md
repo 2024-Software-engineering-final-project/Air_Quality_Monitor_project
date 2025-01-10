@@ -57,3 +57,64 @@
     + AQI 警示狀態改變時，會記錄於圖表上，供使用者回看  
 + 動態展示設計：使用者可選擇不同地區、指標，和調整時間範圍，以詳細觀察不同條件下的數據  
 
+
+### 數據模型
+
+Prometheus 中的數據存儲以時間序列為單位：
++ Metric (float variables)名稱：
+
+| 資料         | 指標名稱                                      |
+|--------------|-----------------------------------------------|
+| 溫度         | air_quality_temperature_celsius              |
+| 濕度         | air_quality_humidity_percentage              |
+| CO2          | air_quality_co2_concentration_ppm            |
+| O3           | air_quality_o3_concentration_ppb             |
+| HC           | air_quality_hc_concentration_ppb             |
+| CO           | air_quality_co_concentration_ppm             |
+| PM2.5        | air_quality_pm25_concentration_micrograms     |
+| PM10         | air_quality_pm10_concentration_micrograms     |
+| VOC          | air_quality_voc_concentration_ppb            |
+| AI PM2.5     | air_quality_prediction_pm25_microgram_cubic_meter |
+
++ station (string variables)名稱：
+
+| 站點ID | 站點中文名稱            |
+|--------|-------------------------|
+| 106    | 共同教育大樓106教室     |
+| B1F    | 活動中心B1              |
+| ARF    | 地質環境館屋頂          |
+| A1F    | unknown location        |
+| M      | unknow location         |
+| PL     | 化工實驗室左側          |
+| PR     | 化工實驗室右側          |
+| 42     | 嘉義影像拍攝地          |
+
+### panel usage
+
+| Panel Type   | Functions                                                                                                                                          |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Text         | 1. Show text                                                                                                                                    |
+|              | 2. Run HTML codes: grab pictures from certain URL                                                                                               |
+| Clock        | Display time information, including date, current time, and time zone                                                                          |
+| State        | 1. Display immediate AQI information                                                                                                           |
+|              | 2. Display sparkline to briefly show trends of data                                                                                            |
+|              | 3. Background color changes when alert state changes                                                                                           |
+| Time series  | 1. Displays an x-y graph with time progression on the x-axis and the magnitude of the values on the y-axis.                                    |
+|              | 2. Background color shows threshold of metrics                                                                                                |
+|              | 3. Alert rules can be linked to Time series panel in the form of annotations to observe when alerts fire and are resolved                      |
+| Geomap       | Display the locations of AQI stations                                                                                                          |
+| Alert list   | 1. Display the information of AQI alerts, including metrics and stations.                                                                      |
+|              | 2. The information of AQI alerts are grouped by metrics.                                                                                       |
+| Row          | Folders holding detailed information (usually in folded state to maintain UI simplicity)                                                      |
+
+### File Descriptions
+
+| 檔案名稱                 | 功能                                           |
+|--------------------------|----------------------------------------------|
+| air_quality_exporter.py | 抓取化生系空品資料的 Prometheus exporter       |
+| config.json             | air_quality_exporter.py 的設定檔             |
+| api_air_prediction.py   | 抓取空品測站的照片並預測                     |
+| test_module.py          | 使用預測模型進行預測                        |
+| pm25_model.pth          | AI 預測模型                                  |
+| prometheus.yml          | Prometheus Server 設定檔                     |
+| air_quality_monitor.json| Grafana Dashboard 設定檔                     |
