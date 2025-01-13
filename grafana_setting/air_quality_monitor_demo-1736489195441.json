@@ -700,7 +700,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Unknown 1"
+                "value": "地環系102教室"
               },
               {
                 "id": "color",
@@ -719,7 +719,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "地質環境館屋頂"
+                "value": "地環系頂樓"
               },
               {
                 "id": "color",
@@ -738,7 +738,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "活動中心B1"
+                "value": "活動中心B1美食街"
               },
               {
                 "id": "color",
@@ -776,7 +776,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室左側"
+                "value": "普化實驗室左測(化生系205)"
               },
               {
                 "id": "color",
@@ -795,7 +795,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室右側"
+                "value": "普化實驗室右側(化生系203)"
               },
               {
                 "id": "color",
@@ -833,7 +833,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Unknown 1"
+                "value": "地環系102教室"
               },
               {
                 "id": "color",
@@ -852,7 +852,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "地質環境館屋頂"
+                "value": "地環系頂樓"
               },
               {
                 "id": "color",
@@ -871,7 +871,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "活動中心B1"
+                "value": "活動中心B1美食街"
               },
               {
                 "id": "color",
@@ -916,7 +916,7 @@
               },
               {
                 "id": "displayName",
-                "value": "化工實驗室左側"
+                "value": "普化實驗室左測(化生系205)"
               }
             ]
           },
@@ -928,7 +928,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室右側"
+                "value": "普化實驗室右側(化生系203)"
               },
               {
                 "id": "color",
@@ -1799,7 +1799,7 @@
       },
       "id": 59,
       "options": {
-        "alertInstanceLabelFilter": "{站點=~\"活動中心B1|地質環境館屋頂|化生實驗室右側|化生實驗室左側|共同教育大樓106教室|Unknown1|Unknown2\"}",
+        "alertInstanceLabelFilter": "{站點=~\"活動中心B1美食街|地環系頂樓|化生實驗室右側|化生實驗室左側|共同教育大樓106教室|Unknown1|Unknown2\"}",
         "alertName": "",
         "dashboardAlerts": false,
         "folder": "",
@@ -1841,7 +1841,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1935,7 +1936,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2029,7 +2031,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2123,7 +2126,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2217,7 +2221,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2311,7 +2316,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2405,7 +2411,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2499,7 +2506,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2593,7 +2601,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2687,7 +2696,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2819,7 +2829,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2923,7 +2934,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2991,7 +3003,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -3106,7 +3119,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           }
@@ -3120,7 +3134,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "活動中心B1"
+                "value": "活動中心B1美食街"
               },
               {
                 "id": "color",
@@ -3158,7 +3172,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "地質環境館屋頂"
+                "value": "地環系頂樓"
               },
               {
                 "id": "color",
@@ -3177,7 +3191,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室左側"
+                "value": "普化實驗室左測(化生系205)"
               },
               {
                 "id": "color",
@@ -3196,7 +3210,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室右側"
+                "value": "普化實驗室右側(化生系203)"
               },
               {
                 "id": "color",
@@ -3215,7 +3229,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Unknown 1"
+                "value": "地環系102教室"
               },
               {
                 "id": "color",
@@ -3344,7 +3358,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           }
@@ -3358,7 +3373,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "活動中心B1"
+                "value": "活動中心B1美食街"
               },
               {
                 "id": "color",
@@ -3396,7 +3411,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "地質環境館屋頂"
+                "value": "地環系頂樓"
               },
               {
                 "id": "color",
@@ -3415,7 +3430,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室左側"
+                "value": "普化實驗室左測(化生系205)"
               },
               {
                 "id": "color",
@@ -3434,7 +3449,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室右側"
+                "value": "普化實驗室右側(化生系203)"
               },
               {
                 "id": "color",
@@ -3453,7 +3468,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Unknown 1"
+                "value": "地環系102教室"
               },
               {
                 "id": "color",
@@ -3582,7 +3597,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           }
@@ -3596,7 +3612,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "活動中心B1"
+                "value": "活動中心B1美食街"
               },
               {
                 "id": "color",
@@ -3634,7 +3650,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "地質環境館屋頂"
+                "value": "地環系頂樓"
               },
               {
                 "id": "color",
@@ -3653,7 +3669,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室左側"
+                "value": "普化實驗室左測(化生系205)"
               },
               {
                 "id": "color",
@@ -3672,7 +3688,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室右側"
+                "value": "普化實驗室右側(化生系203)"
               },
               {
                 "id": "color",
@@ -3691,7 +3707,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Unknown 1"
+                "value": "地環系102教室"
               },
               {
                 "id": "color",
@@ -3820,7 +3836,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           }
@@ -3834,7 +3851,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "活動中心B1"
+                "value": "活動中心B1美食街"
               },
               {
                 "id": "color",
@@ -3872,7 +3889,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "地質環境館屋頂"
+                "value": "地環系頂樓"
               },
               {
                 "id": "color",
@@ -3891,7 +3908,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室左側"
+                "value": "普化實驗室左測(化生系205)"
               },
               {
                 "id": "color",
@@ -3910,7 +3927,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室右側"
+                "value": "普化實驗室右側(化生系203)"
               },
               {
                 "id": "color",
@@ -3929,7 +3946,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Unknown 1"
+                "value": "地環系102教室"
               },
               {
                 "id": "color",
@@ -4058,7 +4075,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           }
@@ -4072,7 +4090,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "活動中心B1"
+                "value": "活動中心B1美食街"
               },
               {
                 "id": "color",
@@ -4110,7 +4128,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "地質環境館屋頂"
+                "value": "地環系頂樓"
               },
               {
                 "id": "color",
@@ -4129,7 +4147,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室左側"
+                "value": "普化實驗室左測(化生系205)"
               },
               {
                 "id": "color",
@@ -4148,7 +4166,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室右側"
+                "value": "普化實驗室右側(化生系203)"
               },
               {
                 "id": "color",
@@ -4167,7 +4185,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Unknown 1"
+                "value": "地環系102教室"
               },
               {
                 "id": "color",
@@ -4296,7 +4314,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           }
@@ -4310,7 +4329,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "活動中心B1"
+                "value": "活動中心B1美食街"
               },
               {
                 "id": "color",
@@ -4348,7 +4367,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "地質環境館屋頂"
+                "value": "地環系頂樓"
               },
               {
                 "id": "color",
@@ -4367,7 +4386,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室左側"
+                "value": "普化實驗室左測(化生系205)"
               },
               {
                 "id": "color",
@@ -4386,7 +4405,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室右側"
+                "value": "普化實驗室右側(化生系203)"
               },
               {
                 "id": "color",
@@ -4405,7 +4424,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Unknown 1"
+                "value": "地環系102教室"
               },
               {
                 "id": "color",
@@ -4534,7 +4553,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           }
@@ -4548,7 +4568,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "活動中心B1"
+                "value": "活動中心B1美食街"
               },
               {
                 "id": "color",
@@ -4586,7 +4606,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "地質環境館屋頂"
+                "value": "地環系頂樓"
               },
               {
                 "id": "color",
@@ -4605,7 +4625,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室左側"
+                "value": "普化實驗室左測(化生系205)"
               },
               {
                 "id": "color",
@@ -4624,7 +4644,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室右側"
+                "value": "普化實驗室右側(化生系203)"
               },
               {
                 "id": "color",
@@ -4643,7 +4663,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Unknown 1"
+                "value": "地環系102教室"
               },
               {
                 "id": "color",
@@ -4772,7 +4792,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           }
@@ -4786,7 +4807,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "活動中心B1"
+                "value": "活動中心B1美食街"
               },
               {
                 "id": "color",
@@ -4824,7 +4845,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "地質環境館屋頂"
+                "value": "地環系頂樓"
               },
               {
                 "id": "color",
@@ -4843,7 +4864,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室左側"
+                "value": "普化實驗室左測(化生系205)"
               },
               {
                 "id": "color",
@@ -4862,7 +4883,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室右側"
+                "value": "普化實驗室右側(化生系203)"
               },
               {
                 "id": "color",
@@ -4881,7 +4902,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Unknown 1"
+                "value": "地環系102教室"
               },
               {
                 "id": "color",
@@ -5010,7 +5031,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               }
             ]
           }
@@ -5024,7 +5046,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "活動中心B1"
+                "value": "活動中心B1美食街"
               },
               {
                 "id": "color",
@@ -5062,7 +5084,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "地質環境館屋頂"
+                "value": "地環系頂樓"
               },
               {
                 "id": "color",
@@ -5081,7 +5103,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室左側"
+                "value": "普化實驗室左測(化生系205)"
               },
               {
                 "id": "color",
@@ -5100,7 +5122,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "化工實驗室右側"
+                "value": "普化實驗室右側(化生系203)"
               },
               {
                 "id": "color",
@@ -5119,7 +5141,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Unknown 1"
+                "value": "地環系102教室"
               },
               {
                 "id": "color",
@@ -5384,7 +5406,7 @@
         "options": [
           {
             "selected": false,
-            "text": "活動中心B1",
+            "text": "活動中心B1美食街",
             "value": "B1F"
           },
           {
@@ -5394,22 +5416,22 @@
           },
           {
             "selected": true,
-            "text": "地質環境館屋頂",
+            "text": "地環系頂樓",
             "value": "ARF"
           },
           {
             "selected": false,
-            "text": "化生實驗室左側",
+            "text": "普化實驗室左測(化生系205)",
             "value": "PL"
           },
           {
             "selected": false,
-            "text": "化生實驗室右側",
+            "text": "普化實驗室右側(化生系203)",
             "value": "PR"
           },
           {
             "selected": false,
-            "text": "Unknown 1",
+            "text": "地環102教室",
             "value": "A1F"
           },
           {
@@ -5418,7 +5440,7 @@
             "value": "M"
           }
         ],
-        "query": "活動中心B1 : B1F,共同教育大樓106教室 : 106,地質環境館屋頂 : ARF,化生實驗室左側 : PL,化生實驗室右側 : PR,Unknown 1 : A1F,Unknown 2 : M",
+        "query": "活動中心B1美食街 : B1F,共同教育大樓106教室 : 106,地環系頂樓 : ARF,普化實驗室左測(化生系205) : PL,普化實驗室右側(化生系203) : PR,地環102教室 : A1F,Unknown 2 : M",
         "type": "custom"
       },
       {
@@ -5433,7 +5455,7 @@
         "options": [
           {
             "selected": true,
-            "text": "活動中心B1",
+            "text": "活動中心B1美食街",
             "value": "B1F"
           },
           {
@@ -5443,22 +5465,22 @@
           },
           {
             "selected": false,
-            "text": "地質環境館屋頂",
+            "text": "地環系頂樓",
             "value": "ARF"
           },
           {
             "selected": false,
-            "text": "化生實驗室左側",
+            "text": "普化實驗室左測(化生系205)",
             "value": "PL"
           },
           {
             "selected": false,
-            "text": "化生實驗室右側",
+            "text": "普化實驗室右側(化生系203)",
             "value": "PR"
           },
           {
             "selected": false,
-            "text": "Unknown 1",
+            "text": "地環102教室",
             "value": "A1F"
           },
           {
@@ -5467,11 +5489,11 @@
             "value": "M"
           }
         ],
-        "query": "活動中心B1 : B1F,共同教育大樓106教室 : 106,地質環境館屋頂 : ARF,化生實驗室左側 : PL,化生實驗室右側 : PR,Unknown 1 : A1F,Unknown 2 : M",
+        "query": "活動中心B1美食街 : B1F,共同教育大樓106教室 : 106,地環系頂樓 : ARF,普化實驗室左測(化生系205) : PL,普化實驗室右側(化生系203) : PR,地環102教室 : A1F,Unknown 2 : M",
         "type": "custom"
       },
       {
-        "allValue": "活動中心B1, 共同教育大樓106教室",
+        "allValue": "活動中心B1美食街, 共同教育大樓106教室",
         "current": {
           "text": [
             "ARF",
@@ -5496,7 +5518,7 @@
         "options": [
           {
             "selected": false,
-            "text": "活動中心B1",
+            "text": "活動中心B1美食街",
             "value": "B1F"
           },
           {
@@ -5506,22 +5528,22 @@
           },
           {
             "selected": true,
-            "text": "地質環境館屋頂",
+            "text": "地環系頂樓",
             "value": "ARF"
           },
           {
             "selected": true,
-            "text": "化生實驗室左側",
+            "text": "普化實驗室左測(化生系205)",
             "value": "PL"
           },
           {
             "selected": true,
-            "text": "化生實驗室右側",
+            "text": "普化實驗室右側(化生系203)",
             "value": "PR"
           },
           {
             "selected": true,
-            "text": "Unknown 1",
+            "text": "地環102教室",
             "value": "A1F"
           },
           {
@@ -5530,7 +5552,7 @@
             "value": "M"
           }
         ],
-        "query": "活動中心B1 : B1F,共同教育大樓106教室 : 106,地質環境館屋頂 : ARF,化生實驗室左側 : PL,化生實驗室右側 : PR,Unknown 1 : A1F,Unknown 2 : M",
+        "query": "活動中心B1美食街 : B1F,共同教育大樓106教室 : 106,地環系頂樓 : ARF,普化實驗室左測(化生系205) : PL,普化實驗室右側(化生系203) : PR,地環102教室 : A1F,Unknown 2 : M",
         "type": "custom"
       },
       {
@@ -5556,6 +5578,6 @@
   "timezone": "browser",
   "title": "air_quality_monitor_demo",
   "uid": "ce3enb7e9nsao2",
-  "version": 9,
+  "version": 10,
   "weekStart": ""
 }
