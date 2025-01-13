@@ -266,7 +266,7 @@ def interpolate(xp, yp):
 
 def get_mean(url, hr):
     raw = requests.get(url).json()["data"]["result"]
-    res = {s: np.float64(np.nan) for s in ["B1F", "M", "106", "A1F", "PL", "PR", "ARF"]}
+    res = {s: np.float64(np.nan) for s in [station.station_id for station in air_quality_stations]}
     for i in raw:
         df = pd.DataFrame(i["values"])
         (data := df.iloc[:, 1].apply(lambda x: int(x) if x.isdigit() else np.nan)).index = pd.to_datetime(
