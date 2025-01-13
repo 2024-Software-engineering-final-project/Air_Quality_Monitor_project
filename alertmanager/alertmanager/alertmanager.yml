@@ -7,22 +7,94 @@ global:
   smtp_require_tls: true
 
 route:
-  group_by: ['alertname']
+  group_by: ['alertname', 'station_id']
   group_wait: 0s
   group_interval: 1s
-  repeat_interval: 30m 
-  receiver: 'email-notifier'
+  repeat_interval: 30m
+  receiver: 'default'
+
+  routes:
+    # 化生系 PR, PL (室內)
+    - match_re:
+        station_id: 'PR|PL'
+      receiver: 'chemistry-biology'
+      continue: true
+
+    # 地環系 A1F (室內)
+    - match_re:
+        station_id: 'A1F'
+      receiver: 'environmental-science'
+      continue: true
+
+    # 地環系 ARF (室外)
+    - match_re:
+        station_id: 'ARF'
+      receiver: 'outdoor'
+      continue: true
+
+    # 通識 106 (室內)
+    - match:
+        station_id: '106'
+      receiver: 'general-education'
+      continue: true
+
+    # 總務處 B1F (室內)
+    - match:
+        station_id: 'B1F'
+      receiver: 'general-affairs'
+      continue: true
+
+    # 所有 critical 警報
+    - match:
+        severity: 'critical'
+      receiver: 'critical-alerts'
 
 receivers:
-  - name: 'email-notifier'
+  # 預設接收者
+  - name: 'default'
     email_configs:
-      - to: 'admwcw@ccu.edu.tw'
+      - to: 'default@example.com'
         headers:
-          subject: '[ALERT] {{ .CommonAnnotations.summary }}'
+          subject: '[AIR QUALITY ALERT - DEFAULT] {{ .CommonAnnotations.summary }}'
 
-inhibit_rules:
-  - source_match:
-      severity: 'critical'
-    target_match:
-      severity: 'warning'
-    equal: ['alertname', 'dev', 'instance']
+  # 化生系接收者 - 于淑君老師
+  - name: 'chemistry-biology'
+    email_configs:
+      - to: 'chejyy@ccu.edu.tw'
+        headers:
+          subject: '[AIR QUALITY ALERT - 化生系] {{ .CommonAnnotations.summary }}'
+
+  # 地環系接收者 - 范誠偉老師
+  - name: 'environmental-science'
+    email_configs:
+      - to: 'cwfan@eq.ccu.edu.tw'
+        headers:
+          subject: '[AIR QUALITY ALERT - 地環系] {{ .CommonAnnotations.summary }}'
+
+  # 通識接收者 - 李晚晴小姐
+  - name: 'general-education'
+    email_configs:
+      - to: 'admgene@ccu.edu.tw'
+        headers:
+          subject: '[AIR QUALITY ALERT - 通識中心] {{ .CommonAnnotations.summary }}'
+
+  # 總務處接收者 - 鄧小姐
+  - name: 'general-affairs'
+    email_configs:
+      - to: 'admasd@ccu.edu.tw'
+        headers:
+          subject: '[AIR QUALITY ALERT - 小吃街] {{ .CommonAnnotations.summary }}'
+  
+  # outdoor - 環安中心 王辰文 先生, 胡老師、熊博安老師
+  - name: 'outdoor'
+    email_configs:
+      - to: 'admwcw@ccu.edu.tw,pahsiung@cs.ccu.edu.tw,chewph@ccu.edu.tw'
+        headers:
+          subject: '[AIR QUALITY ALERT - 室外] {{ .CommonAnnotations.summary }}'
+
+  # 所有 critical 警報的專用接收者 - 環安中心 王辰文 先生, 胡老師、熊博安老師
+  - name: 'critical-alerts'
+    email_configs:
+      - to: 'admwcw@ccu.edu.tw,pahsiung@cs.ccu.edu.tw,chewph@ccu.edu.tw'
+        headers:
+          subject: '[AIR QUALITY ALERT - 嚴重警報] {{ .CommonAnnotations.summary }}'

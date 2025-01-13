@@ -1,11 +1,279 @@
 groups:
   - name: air_quality_alerts
     rules:
-      - alert: HighAirQualityIndex
-        expr: air_quality_aqi > 25
-        for: 30m
+      # Indoor PM2.5 alert - warning
+      - alert: HighPM25Concentration_indoor
+        expr: air_quality_pm25_microgram_cubic_meter{station_id=~"PR|PL|A1F|106|B1F"} > 30.4
+        for: 20m
+        labels:
+          severity: warning
+          station_group: indoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "High PM2.5 Detected at Station {{ $labels.station_id }}"
+          description: "The PM2.5 level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 30.4 μg/m³ for over 20 minutes. It is unhealthy for sensitive groups."
+
+      # Indoor PM2.5 alert - critical
+      - alert: VeryHighPM25Concentration_indoor
+        expr: air_quality_pm25_microgram_cubic_meter{station_id=~"PR|PL|A1F|106|B1F"} > 50.4
+        for: 20m
         labels:
           severity: critical
+          station_group: indoor
+          station_id: "{{ $labels.station_id }}"
         annotations:
-          summary: "High Air Quality Index Detected"
-          description: "The AQI at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 150 for over 30 minutes."
+          summary: "Very High PM2.5 Detected at Station {{ $labels.station_id }}"
+          description: "The PM2.5 level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 50.4 μg/m³ for over 20 minutes. It is unhealthy for everyone."
+      
+
+      # Outdoor PM2.5 alert - warning
+      - alert: HighPM25Concentration_outdoor
+        expr: air_quality_pm25_microgram_cubic_meter{station_id=~"ARF"} > 125.4
+        for: 20m
+        labels:
+          severity: warning
+          station_group: outdoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "High PM2.5 Detected at Station {{ $labels.station_id }}"
+          description: "The PM2.5 level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 125.4 μg/m³ for over 20 minutes. It is unhealthy for everyone."
+
+      # Outdoor PM2.5 alert - critical
+      - alert: VeryHighPM25Concentration_outdoor
+        expr: air_quality_pm25_microgram_cubic_meter{station_id=~"ARF"} > 100.4
+        for: 20m
+        labels:
+          severity: critical
+          station_group: outdoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "Very High PM2.5 Detected at Station {{ $labels.station_id }}"
+          description: "The PM2.5 level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 100.4 μg/m³ for over 20 minutes. It is very unhealthy for everyone."
+
+      # Indoor PM10 alert - warning
+      - alert: HighPM10Concentration_indoor
+        expr: air_quality_pm10_microgram_cubic_meter{station_id=~"PR|PL|A1F|106|B1F"} > 75
+        for: 20m
+        labels:
+          severity: warning
+          station_group: indoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "High PM10 Detected at Station {{ $labels.station_id }}"
+          description: "The PM10 level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 75 μg/m³ for over 20 minutes. It is unhealthy for sensitive groups."
+
+      # Indoor PM10 alert - critical
+      - alert: VeryHighPM10Concentration_indoor
+        expr: air_quality_pm10_microgram_cubic_meter{station_id=~"PR|PL|A1F|106|B1F"} > 190
+        for: 20m
+        labels:
+          severity: critical
+          station_group: indoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "Very High PM10 Detected at Station {{ $labels.station_id }}"
+          description: "The PM10 level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 190 μg/m³ for over 20 minutes. It is unhealthy for everyone."
+      
+      # Outdoor PM10 alert - warning
+      - alert: HighPM10Concentration_outdoor
+        expr: air_quality_pm10_microgram_cubic_meter{station_id=~"ARF"} > 190
+        for: 20m
+        labels:
+          severity: warning
+          station_group: outdoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "High PM10 Detected at Station {{ $labels.station_id }}"
+          description: "The PM10 level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 190 μg/m³ for over 20 minutes. It is unhealthy for everyone."
+
+      # Outdoor PM10 alert - critical
+      - alert: VeryHighPM10Concentration_outdoor
+        expr: air_quality_pm10_microgram_cubic_meter{station_id=~"ARF"} > 354
+        for: 20m
+        labels:
+          severity: critical
+          station_group: outdoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "Very High PM10 Detected at Station {{ $labels.station_id }}"
+          description: "The PM10 level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 354 μg/m³ for over 20 minutes. It is very unhealthy for everyone."
+
+      # Indoor O3 alert - warning
+      - alert: HighO3Concentration_indoor
+        expr: air_quality_o3_ppb{station_id=~"PR|PL|A1F|106|B1F"} > 100
+        for: 20m
+        labels:
+          severity: warning
+          station_group: indoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "High O3 Detected at Station {{ $labels.station_id }}"
+          description: "The O3 level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 100 ppb for over 20 minutes. It is unhealthy for sensitive groups."
+
+      # Indoor O3 alert - critical
+      - alert: VeryHighO3Concentration_indoor
+        expr: air_quality_o3_ppb{station_id=~"PR|PL|A1F|106|B1F"} > 134
+        for: 20m
+        labels:
+          severity: critical
+          station_group: indoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "Very High O3 Detected at Station {{ $labels.station_id }}"
+          description: "The O3 level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 134 ppb for over 20 minutes. It is unhealthy for everyone."
+
+      # Outdoor O3 alert - warning
+      - alert: HighO3Concentration_outdoor
+        expr: air_quality_o3_ppb{station_id=~"ARF"} > 134
+        for: 20m
+        labels:
+          severity: warning
+          station_group: outdoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "High O3 Detected at Station {{ $labels.station_id }}"
+          description: "The O3 level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 134 ppb for over 20 minutes. It is unhealthy for everyone."
+
+      # Outdoor O3 alert - critical
+      - alert: VeryHighO3Concentration_outdoor
+        expr: air_quality_o3_ppb{station_id=~"ARF"} > 204
+        for: 20m
+        labels:
+          severity: critical
+          station_group: outdoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "Very High O3 Detected at Station {{ $labels.station_id }}"
+          description: "The O3 level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 204 ppb for over 20 minutes. It is very unhealthy for everyone."
+
+      # Indoor CO alert - warning
+      - alert: HighCOConcentration_indoor
+        expr: air_quality_co_ppm{station_id=~"PR|PL|A1F|106|B1F"} > 9.4
+        for: 20m
+        labels:
+          severity: warning
+          station_group: indoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "High CO Detected at Station {{ $labels.station_id }}"
+          description: "The CO level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 9.4 ppm for over 20 minutes. It is unhealthy for sensitive groups."
+      
+      # Indoor CO alert - critical
+      - alert: VeryHighCOConcentration_indoor
+        expr: air_quality_co_ppm{station_id=~"PR|PL|A1F|106|B1F"} > 12.4
+        for: 20m
+        labels:
+          severity: critical
+          station_group: indoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "Very High CO Detected at Station {{ $labels.station_id }}"
+          description: "The CO level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 12.4 ppm for over 20 minutes. It is unhealthy for everyone."
+
+      # Outdoor CO alert - warning
+      - alert: HighCOConcentration_outdoor
+        expr: air_quality_co_ppm{station_id=~"ARF"} > 12.4
+        for: 20m
+        labels:
+          severity: warning
+          station_group: outdoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "High CO Detected at Station {{ $labels.station_id }}"
+          description: "The CO level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 12.4 ppm for over 20 minutes. It is unhealthy for everyone."
+
+      # Outdoor CO alert - critical
+      - alert: VeryHighCOConcentration_outdoor
+        expr: air_quality_co_ppm{station_id=~"ARF"} > 15.4
+        for: 20m
+        labels:
+          severity: critical
+          station_group: outdoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "Very High CO Detected at Station {{ $labels.station_id }}"
+          description: "The CO level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 15.4 ppm for over 20 minutes. It is unhealthy for everyone."
+
+      # Indoor VOCs alert - warning
+      - alert: HighVOCsConcentration_indoor
+        expr: air_quality_voc_ppb{station_id=~"PR|PL|A1F|106|B1F"} > 220
+        for: 20m
+        labels:
+          severity: warning
+          station_group: indoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "High VOCs Detected at Station {{ $labels.station_id }}"
+          description: "The VOCs level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 220 ppb for over 20 minutes. It is unhealthy for sensitive groups."
+
+      # Indoor VOCs alert - critical
+      - alert: VeryHighVOCsConcentration_indoor
+        expr: air_quality_voc_ppb{station_id=~"PR|PL|A1F|106|B1F"} > 660
+        for: 20m
+        labels:
+          severity: critical
+          station_group: indoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "Very High VOCs Detected at Station {{ $labels.station_id }}"
+          description: "The VOCs level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 660 ppb for over 20 minutes. It is unhealthy for everyone."
+
+      # Outdoor VOCs alert - warning
+      - alert: HighVOCsConcentration_outdoor
+        expr: air_quality_voc_ppb{station_id=~"ARF"} > 660
+        for: 20m
+        labels:
+          severity: warning
+          station_group: outdoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "High VOCs Detected at Station {{ $labels.station_id }}"
+          description: "The VOCs level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 660 ppb for over 20 minutes. It is unhealthy for everyone."
+
+      # Outdoor VOCs alert - critical
+      - alert: VeryHighVOCsConcentration_outdoor
+        expr: air_quality_voc_ppb{station_id=~"ARF"} > 2200
+        for: 20m
+        labels:
+          severity: critical
+          station_group: outdoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "Very High VOCs Detected at Station {{ $labels.station_id }}"
+          description: "The VOCs level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 2200 ppb for over 20 minutes. It is unhealthy for everyone."
+        
+      # Indoor CO2 alert - warning
+      - alert: HighCO2Concentration_indoor
+        expr: air_quality_co2_ppm{station_id=~"PR|PL|A1F|106|B1F"} > 850
+        for: 20m
+        labels:
+          severity: warning
+          station_group: indoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "High CO2 Detected at Station {{ $labels.station_id }}"
+          description: "The CO2 level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 850 ppm for over 20 minutes. It is unhealthy for sensitive groups."
+
+      # Indoor CO2 alert - critical
+      - alert: VeryHighCO2Concentration_indoor
+        expr: air_quality_co2_ppm{station_id=~"PR|PL|A1F|106|B1F"} > 1000
+        for: 20m
+        labels:
+          severity: critical
+          station_group: indoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "Very High CO2 Detected at Station {{ $labels.station_id }}"
+          description: "The CO2 level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 1000 ppm for over 20 minutes. It is unhealthy for everyone."
+
+      # Outdoor CO2 alert - warning
+      - alert: HighCO2Concentration_outdoor
+        expr: air_quality_co2_ppm{station_id=~"ARF"} > 1000
+        for: 20m
+        labels:
+          severity: warning
+          station_group: outdoor
+          station_id: "{{ $labels.station_id }}"
+        annotations:
+          summary: "High CO2 Detected at Station {{ $labels.station_id }}"
+          description: "The CO2 level at station {{ $labels.station_id }} is {{ $value }}, exceeding the threshold of 1000 ppm for over 20 minutes. It is unhealthy for everyone."
