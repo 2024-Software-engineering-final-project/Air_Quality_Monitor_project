@@ -53,7 +53,7 @@ receivers:
   # 預設接收者
   - name: 'default'
     email_configs:
-      - to: 'default@example.com'
+      - to: 'pahsiung@cs.ccu.edu.tw,chewph@ccu.edu.tw'
         headers:
           subject: '[AIR QUALITY ALERT - DEFAULT] {{ .CommonAnnotations.summary }}'
 
